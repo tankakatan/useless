@@ -5,4 +5,4 @@ Was cut violently from a recent project of mine. It does not even compile, total
 
 ::)
 
-All code is formatted using tabs with tab width set to 4. GitHub does not allow to change tab size for repository viewer, so be prepared for creeped formatting when viewing the code via browser.
+Some code is formatted using tabs with tab width set to 4. GitHub does not allow to change tab size for repository viewer, so be prepared for creeped formatting when viewing the code via browser. Will fix that in future.
