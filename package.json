@@ -1,0 +1,39 @@
+{
+  "name": "useless",
+  "version": "0.0.0",
+  "description": "Yet Another Useless Framework",
+  "main": "useless.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpl/useless.git"
+  },
+  "keywords": [
+    "useless",
+    "framework",
+    "OOP",
+    "metaprogramming",
+    "traits",
+    "functional",
+    "underscore",
+    "reflection",
+    "type matching",
+    "math",
+    "algorithms"
+  ],
+  "author": "Vitaly Gordon <rocket.mind@gmail.com> (http://github.com/xpl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpl/useless/issues"
+  },
+  "homepage": "https://github.com/xpl/useless#readme",
+  "dependencies": {
+    "underscore": ">= 1.8.3",
+    "process": ">= 0.9.0"
+  }
+}

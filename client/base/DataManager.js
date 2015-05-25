@@ -46,7 +46,7 @@ DataManager = $singleton (Component, {
 		$defaults: {
 			events: {},
 			lastIndex: -1,
-			nonce: _.randomHexString (16) },
+			nonce: Format.randomHexString (16) },
 
 		on: function (what, delegate) {
 			_.each (what.split (' '), _.$ (this, function (what) {

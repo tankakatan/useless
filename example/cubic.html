@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Cubic</title>
+		<script src="../lib/underscore-min.js"></script>
+		<script src="../lib/jquery-2.0.3.min.js"></script>
+		<script src="../lib/foundation-0.0.1.js"></script>
+	</head>
+	<style>
+		.rect { position: relative; background: #cccccc; width: 200px; height: 200px; }
+		.canvas { }
+		.handle { position: absolute; width: 16px; height: 16px; border-radius: 16px; margin-top: -8px; margin-left: -8px; }
+		.handle1 { top: 100%; left: 0;    background: red;   }
+		.handle2 { top:   0;  left: 100%; background: blue;  }
+	</style>
+	<script>
+		$(document).ready (function () {
+			var cnv = $('canvas')[0]
+			var ctx = $('canvas')[0].getContext ('2d')
+
+			var update = function () {
+
+				var pt1 = $('.handle1').offset ()
+				var pt2 = $('.handle2').offset ()
+
+				var cubic = Bezier.cubic1D.partial (
+					pt1.left / cnv.width,
+					pt1.top  / cnv.height,
+					pt2.left / cnv.width,
+					pt2.top  / cnv.height)
+
+				ctx.clearRect (0, 0, cnv.width, cnv.height)
+				ctx.beginPath ()
+
+				var x = 0
+
+				    ctx.moveTo (0, 0)
+				_.times (cnv.width, function (x) { var tx = x / cnv.width
+					ctx.lineTo (x, cubic (tx) * cnv.height) })
+			        ctx.stroke ()
+			}
+
+			$('.handle').each (function (i, handle) {
+				$(handle).drag ({
+					start: function () {
+						this.pos = this.offset () },
+					move:  function (offset) {
+						this.css ({
+							left: this.pos.left + offset.x,
+							top:  this.pos.top  + offset.y }); update () },
+					end:   function () {} }) })
+
+			update () })
+		</script>
+	<body>
+		<div class="rect">
+			<canvas width="200" height="200"></canvas>
+			<div class="handle handle1"></div>
+			<div class="handle handle2"></div>
+		</div>
+	</body>
+</html>

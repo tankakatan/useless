@@ -121,7 +121,7 @@ Context = $prototype ({
 			else {
 				util.writeRequestDataToFile ({
 					request: this.request,
-					filePath: path.join (process.env.TMP || process.env.TMPDIR || process.env.TEMP || '/tmp' || process.cwd (), _.randomHexString (32)),
+					filePath: path.join (process.env.TMP || process.env.TMPDIR || process.env.TEMP || '/tmp' || process.cwd (), Format.randomHexString (32)),
 					success: success,
 					failure: this.$ (function () {
 						this.jsonFailure ('Ошибка при загрузке файла') }) }) } } } })
