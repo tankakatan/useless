@@ -1,5 +1,3 @@
-var Testosterone = require ('../base/tests')
-
 module.exports = $trait ({
 
 	/*	Example of a single test routine

@@ -1,5 +1,5 @@
-var imagemagick = require ('../imagemagick'),
-	path = require ('path')
+var imagemagick = require ('./base/imagemagick'),
+	path        = require ('path')
 	
 module.exports = $trait ({
 

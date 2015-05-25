@@ -30,7 +30,7 @@ _.defineTagKeyword ('async')
  */
 _.tests.itself = {
 
-    /*  For reference on basic syntax of assertions, see common.js, here's only
+    /*  For reference on basic syntax of assertions, see assert.js, here's only
         extra function provided by this module:
      */
 

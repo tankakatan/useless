@@ -1,5 +1,3 @@
-require ('../../base/component')
-
 module.exports = $trait ({
 
 	beforeInit: function (then) { log.info ('Setting up exception handling...')

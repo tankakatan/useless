@@ -1,11 +1,9 @@
 /* jshint -W099 */
 
-var _  			= require ('underscore'),
-    path 		= require ('path'),
+var path 		= require ('path'),
 	fs 			= require ('fs'),
 	exec		= require ('child_process').exec,
-	util		= require ('./util'),
-	foundation	= require ('./base/foundation')
+	util		= require ('./util')
 
 module.exports = {
 	identify: function (path, complete) {

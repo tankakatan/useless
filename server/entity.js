@@ -1,7 +1,7 @@
 module.exports = $trait ({
 
 	beforeInit:	function (then) {
-		require ('../db').init ('president', this.$ (function (db) {
+		require ('../db').init (this.dbName, this.$ (function (db) {
 														this.db = db
 														then () })) },
 

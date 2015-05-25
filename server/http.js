@@ -1,5 +1,5 @@
 var http = require ('http'),
-	util = require ('../util')
+	util = require ('./base/util')
 
 module.exports = $trait ({
 
