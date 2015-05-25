@@ -1,15 +1,13 @@
-var _			= require ('underscore'),
-	path		= require ('path'),
+var path		= require ('path'),
 	fs			= require ('fs'),
 	process		= require ('process'),
 	http		= require ('http'),
 	https		= require ('https'),
 	crypto		= require ('crypto'),
-	foundation	= require ('../../base/foundation'),
-	log			= require ('../../base/log'),
 	exec		= require ('child_process').exec,
 	Buffer		= require ('buffer').Buffer,
-	Iconv		= require ('iconv').Iconv
+	Iconv		= require ('iconv').Iconv,
+	_			= require ('useless')
 
 _.tests.util = {
 

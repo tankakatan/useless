@@ -1,6 +1,6 @@
 var fs				= require ('fs'),
     path			= require ('path'),
-    util            = require ('../util'),
+    util            = require ('./base/util'),
     exec			= require ('child_process').exec
 
 module.exports = $trait ({
